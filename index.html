@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN Hands</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="navbar">
+         <img src="./images/VNHandsLogo.png" alt="VN Hands logo"/>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="nav-close-btn" aria-label="Close Menu">&times;</button>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="hero">
+            <h2>Help Self Healing</h2>
+            <p>Experience authentic therapeutic massage with VNHands.</p>
+        </section>
+
+        <section class="Intro">
+            <p>Welcome to VNHands self help healing.This is where the tagline of the business will go along with the loction and a background image</p>
+
+        </section>
+
+        <section class="split">
+            <img src="./images/kimPic2.jpg">
+            <P>My name is Thi Kim Ngan Tran. I have over 8 years of experience in
+                therapeutic massage including such as deep tissue,relaxation,
+                reflexology and Easten methods. Before moving to the UK, I work as a
+                massage therapist in Viet Nam, where I build strong and trusted
+                relationships with my clients. They appreciated my care,skill and
+                personalised treatment.<br>
+                <br>
+                Now I’m living in Swansea, I want to bring this same high-quality,healing
+                service to my local community. I believe massage is not only for
+                relaxation but also for improving health and well-being.
+                I have named my brand VNHands ,which reflects both my Vietnamese
+                roots and the healing work I do with my hands.<br>
+                <br>
+                In addition to formal qualifications and continuous professtional
+                development, I’m currently volunteering as a massage therapist at
+                Swansea Care Centre. This experience allows I to support the people in
+                community while further developing my skill and demonstrating a strong
+                commitment to care and service.<br>
+                <br>
+                VNHands targets working professionals, new mothers, and older adults
+                in Swansea. The business aims to build a loyal client base through
+                excellent customer care, community engagement, and effective local
+                marketing. The long-term vision includes expanding services to include
+                pregnancy massage and mobile treatments.</P>
+        </section>
+
+
+        <section class="services">
+            <h2>Our services</h2>
+                <div class="grid">
+                    <div class="service-card">
+                        <img src="./images/hands.jpg" alt="describe massage 1  here"/>
+                        <p>Massage type 1</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./images/head.jpg" alt="describe massage 2 here"/>
+                        <p>Massage type 2</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./images/hotStick.jpg" alt="describe massage 3 here"/>
+                        <p>Massage type 3</p>
+                    </div>
+                </div>
+        </section> 
+        
+        <footer class="footer">
+            <div class="footer-left">
+              <h4>Contact Us</h4>
+              <p>Email: contact@vnhands.com</p>
+              <p>Phone: 01234 567890</p>
+              <p>Address: 24 Weavers House, Maritime Quarter, SA1 1RU</p>
+            </div>
+          
+            <div class="footer-center">
+              <p>&copy; 2025 VNHands. All rights reserved.</p>
+            </div>
+          
+            <div class="footer-right">
+              <h4>Follow Us</h4>
+              <div class="social-icons">
+                <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </footer>
+    </main>
+   
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const closeBtn = document.querySelector('.nav-close-btn');
+      
+        toggleBtn.addEventListener('click', () => {
+            console.log('Menu button clicked');
+          navLinks.classList.toggle('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            console.log('Menu close button clicked');
+          navLinks.classList.remove('show');
+        });
+      </script>
+    
+</body>
+</html>
