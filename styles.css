@@ -91,7 +91,7 @@ body {
     padding: 2rem;
     text-align: center;
     background: #f4f4f4;
-    background: url(./images/hands.jpg) center/cover no-repeat;
+    background: url(./images/wide.avif) center/cover no-repeat;
     color: white;
     text-shadow: 1px 1px 3px black;
     padding: 4rem 2rem;
@@ -296,6 +296,16 @@ body {
 
 .nav-links.show .nav-close-btn {
   display: block;
+}
+
+.intro{
+  grid-template-columns: 1fr; /* Stack content on top of each other */
+        text-align: center;
+
+}
+
+.intro img{
+  margin: 0 auto; /* Center the image */
 }
     
 
