@@ -83,8 +83,10 @@ section {
 
 .navbar img {
   max-width: 100%;
-  height: 200px;
-
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 200px;
+  /* limit max height */
 }
 
 /* Hide menu button on desktop */
@@ -141,7 +143,7 @@ section {
 .content {
   display: grid;
   repeat(auto-fit, minmax(250px, 1fr));
-  grid-rows: 4;
+  grid-row: 4;
 
 
 }
@@ -262,7 +264,12 @@ section {
 
   }
 
-  .navbar img {}
+  .navbar img {
+    max-height: 100px;
+    /* or whatever fits nicely */
+    height: auto;
+  }
+
 
   .menu-toggle {
     display: block;
@@ -298,21 +305,25 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
+    height: calc(100vh - 232px);
     background-color: #333;
-    overflow: visible;
-    max-height: 0;
+    overflow-y: auto;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-20px);
     z-index: 999;
   }
 
   /* Nav links list */
   .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
-    text-align: center;
+    list-style: none;
   }
 
   .nav-links ul li {
@@ -320,12 +331,11 @@ section {
   }
 
   .nav-links a {
-    display: block;
-    padding: 1rem;
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
-
+    text-align: center;
   }
 
   /* Show menu */
@@ -337,9 +347,15 @@ section {
 
   .nav-close-btn {
     position: absolute;
-    bottom: 1rem;
+    top: 1rem;
     right: 1rem;
-    display: none;
+    display: block;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
   }
 
   .nav-links.show .nav-close-btn {
