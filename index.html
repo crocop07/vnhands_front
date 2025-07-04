@@ -29,7 +29,8 @@
     <main class="content">
         <section class="hero" id="hero">
             <p>Authentic Vietnamese Massage & Holistic Therapies in Swansea</p>
-            <a href="#bookNow" class="btn" aria-label="Book Now">Book Now</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWCL1YEm5qdyg9dtDuXNC6nu1q_AzBtWXWZEcNijskl79dcA/viewform?usp=dialog"
+                target="_blank" class="btn" aria-label="Book Now">Book Now</a>
         </section>
 
 
@@ -68,61 +69,69 @@
 
             <div class="bubble">
                 <h3>Still Have Questions?</h3>
-                <p>Feel free to <a href="tel:07404793531">call us</a> or email <a
-                        href="mailto:kim@vnhands.co.uk">kim@vnhands.co.uk</a>.</p>
+                <p>Feel free to call or text us at 07404793531 or email <a
+                        href="mailto:kim@vnhands.co.uk">kim@vnhands.co.uk</a>.
+                    For quickest responses, please message us
+                    on <a href="https://wa.me/447404793531">WhatsApp</a>
+                    .<br>
+                    <br>
+                    We reply promptly and can send you booking details there.
+                </p>
             </div>
         </section>
 
 
         <section class="intro" id="intro">
 
-            <h2>About</h2>
+            <img src="./images/hotStick.jpg" class="about-img" alt="a natural healing method">
+
+
 
             <div class="bubble">
-                <h2>What Is "Help Self Healing"?</h2>
-                <p>
 
-                    When God created all living things, He gave each one an inner strength, a natural ability to heal
-                    itself. In the past, people lived closer to nature.
-                    But today, our world is filled with pollution—air, noise, water—and much of what we consume is
-                    altered by human hands. As a result, many people rely heavily on medicine, which weakens the body's
-                    natural defenses. While modern treatments may
-                    bring quick relief, they often come with hidden long-term consequences.
+                <h2>What is "Help Self Healing"?</h2>
+                <p>
+                    At VN Hands, we believe in the body’s natural ability to heal.
+                    Our approach combines traditional Vietnamese massage with
+                    holistic therapies to support both physical and emotional well-being.
+                    Each treatment is designed to restore balance, reduce stress, and
+                    encourage your body's own healing response.
                     <br>
                     <br>
                     At VNHands, we follow traditional healing methods passed down by our ancestors to support the body's
                     natural recovery from within. "Help Self-Healing"
                     is not just about physical wellness—it's about restoring your inner strength and embracing a more
-                    vibrant life. As the saying goes, “What is different
-                    is beautiful”—a truth that will always remain.
+                    vibrant, healthy life.
                 </p>
             </div>
 
         </section>
 
+
+
         <section class="split">
-            <img src="./images/kimPic2.jpg">
+
+
             <div class="bubble">
-                <P>I'm Thi Kim Ngan Tran, a qualified massage therapist with over 8 years’ experience in therapeutic
+                <P>I'm Thi Kim Ngan Tran, a qualified massage therapist with over 8 years experience in therapeutic
                     massage,
                     including deep tissue, relaxation, reflexology, and traditional Eastern techniques. Now practicing
-                    at a
-                    trusted Chinese medicine clinic in Swansea, I combine my skills with a passion for natural healing
-                    to
-                    support your body's health and well-being.<br>
+                    at the Clinic of Chinese medicine in Swansea, I combine my skills with a passion for natural
+                    healing
+                    to support your body's health and well-being.<br>
                     <br>
                     Drawing on both Western massage and Eastern wellness traditions, I offer personalised treatments
                     designed
                     to relieve pain, reduce stress, and restore balance. My approach is gentle yet effective, and
                     tailored to
-                    your unique needs, whether you’re managing tension, recovering from injury, or simply seeking
+                    your needs, whether you’re managing tension, recovering from injury, or simply seeking
                     relaxation.
                     <br>
 
-                    <br> I also bring knowledge of traditional therapies like moxibustion, or heat therapy, which I use
+                    <!-- <br> I also bring knowledge of traditional therapies like moxibustion, or heat therapy, which I use
                     as part of my holistic approach to promote circulation and relaxation. While I continue to
                     pursue professional licensing to offer acupuncture, my treatments focus on safe, natural healing
-                    methods to help you feel your best.<br>
+                    methods to help you feel your best.<br> -->
 
                     <br>If you’re looking for compassionate, professional care in a supportive environment, I would love
                     to
@@ -138,6 +147,7 @@
                     <br>
                 </P>
             </div>
+            <img src="./images/kimPic2.jpg" class="about-img">
         </section>
 
         <div id="location">
@@ -186,10 +196,7 @@
                     <p>ADD-ON OPTIONS: Head massage, Hand massage, Pelvic & legs treatment....</p>
                 </div>
             </div>
-            <div>
-                <p>To arrange a booking please contact us by phone (07404793531) or <a href="mailto:kim@vnhands.co.uk"
-                        target="_blank">e-mail:kim@vnhands.co.uk</a></p>
-            </div>
+
         </section>
 
 
@@ -199,9 +206,7 @@
                 <p>Email: kim@vnhands.co.uk</p>
                 <p>Phone: 07404793531</p>
                 <p>Address: Clinic of Chinese medicine, 107 Walter Rd, Swansea SA1 5QQ </p>
-                <h4>Contact Us</h4>
-                <p>Email: kim@vnhands.co.uk</p>
-                <p>Phone: 07404793531</p>
+
 
 
             </div>
@@ -233,12 +238,11 @@
         const closeBtn = document.querySelector('.nav-close-btn');
 
         toggleBtn.addEventListener('click', () => {
-            console.log('Menu button clicked');
             navLinks.classList.toggle('show');
         });
 
         closeBtn.addEventListener('click', () => {
-            console.log('Menu close button clicked');
+
             navLinks.classList.remove('show');
         });
 
@@ -256,12 +260,7 @@
             }
         });
 
-        //close menu on click of menu option
-        navItems.forEach(link => {
-            link.addEventListener('click', () => {
-                closeMenu();
-            });
-        });
+
     </script>
 
 </body>

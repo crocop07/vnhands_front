@@ -45,7 +45,7 @@ section {
 }
 
 .bubble {
-  background-color: #ffffff;
+  background-color: #e9e3da;
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,6 +254,13 @@ section {
   background: linear-gradient(135deg, #4a6bff, #3a5bef);
 }
 
+.about-img {
+  max-height: 600px;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
@@ -306,7 +313,7 @@ section {
     left: 0;
     width: 100%;
     height: calc(100vh - 232px);
-    background-color: #333;
+    background-color: whitesmoke;
     overflow-y: auto;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -333,7 +340,7 @@ section {
   .nav-links a {
     font-size: 1.2rem;
     padding: 0.75rem 0;
-    color: #fff;
+    color: #2f7a33;
     text-decoration: none;
     text-align: center;
   }
@@ -351,7 +358,7 @@ section {
     right: 1rem;
     display: block;
     font-size: 2rem;
-    color: white;
+    color: #2f7a33;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -366,6 +373,7 @@ section {
     scroll-margin-top: 0px;
     /* adjust 0px to your navbar height, this ensures the alignment of section headings under the navbar, changed from desktop view */
   }
+
 
   .intro {
     grid-template-columns: 1fr;
@@ -411,6 +419,12 @@ section {
 
   .social-icons a img {
     margin: 0 0.5rem;
+  }
+
+  .prices {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
   }
 
 }
