@@ -12,12 +12,15 @@
 
 <body>
     <header class="navbar">
-        <img src="./images/VNHandsLogo.png" alt="VN Hands logo" />
+        <a href="#hero">
+            <img src="./images/VNHandsLogo.png" alt="VNHands logo" />
+        </a>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav class="nav-links">
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#intro">About</a></li>
+                <li><a href="#location">Location</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#book">Booking</a></li>
                 <li><a href="#reviews">Reviews</a></li>
@@ -29,8 +32,7 @@
     <main class="content">
         <section class="hero" id="hero">
             <p>Authentic Vietnamese Massage & Holistic Therapies in Swansea</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWCL1YEm5qdyg9dtDuXNC6nu1q_AzBtWXWZEcNijskl79dcA/viewform?usp=dialog"
-                target="_blank" class="btn" aria-label="Book Now">Book Now</a>
+
         </section>
 
 
@@ -42,11 +44,29 @@
             <div class="bubble">
                 <h3>How It Works</h3>
                 <ol>
-                    <li>Fill out the short booking form.</li>
-                    <li>We'll confirm your appointment by phone or email.</li>
+                    <li>Select your preferred session duration using the booking calendar below.</li>
+                    <li>Choose an available date and time that suits you.</li>
+                    <li>Provide your contact details to confirm your appointment.</li>
+                    <li>We'll send you a confirmation by text or email.</li>
                     <li>Arrive 5–10 minutes early to relax before your session.</li>
                 </ol>
+                <ul>
+                    <li><strong>Note for new clients: </strong>An additional 15-minute free consultation will be
+                        included
+                        before your first session. This helps us understand your needs and provide the best possible
+                        care.
+                    </li>
+                </ul>
             </div>
+
+            <!-- Calendly inline widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+            <div class="calendly-inline-widget" data-url="https://calendly.com/tranthikimngan30041993"
+                style="min-width:320px;height:900px;">
+            </div>
+            <!-- Calendly inline widget end -->
 
             <div class="bubble">
                 <h3>What You Need to Know</h3>
@@ -63,8 +83,8 @@
                     Click the button below to fill out our secure form. We'll contact you shortly to confirm your
                     session.
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWCL1YEm5qdyg9dtDuXNC6nu1q_AzBtWXWZEcNijskl79dcA/viewform?usp=dialog"
-                    target="_blank" class="btn" id="bookNow">Book Now</a>
+                <a href="https://calendly.com/tranthikimngan30041993" target="_blank" class="btn" id="bookNow">Book
+                    Now</a>
             </div>
 
             <div class="bubble">
@@ -82,37 +102,17 @@
 
 
         <section class="intro" id="intro">
-
-            <img src="./images/hotStick.jpg" class="about-img" alt="a natural healing method">
-
+            <h2>About</h2>
 
 
-            <div class="bubble">
-
-                <h2>What is "Help Self Healing"?</h2>
-                <p>
-                    At VN Hands, we believe in the body’s natural ability to heal.
-                    Our approach combines traditional Vietnamese massage with
-                    holistic therapies to support both physical and emotional well-being.
-                    Each treatment is designed to restore balance, reduce stress, and
-                    encourage your body's own healing response.
-                    <br>
-                    <br>
-                    At VNHands, we follow traditional healing methods passed down by our ancestors to support the body's
-                    natural recovery from within. "Help Self-Healing"
-                    is not just about physical wellness—it's about restoring your inner strength and embracing a more
-                    vibrant, healthy life.
-                </p>
-            </div>
-
-        </section>
-
-
-
-        <section class="split">
 
 
             <div class="bubble">
+
+                <img src="./images/kimPic2.jpg" class="about-img" alt="a natural healing method">
+
+                <h2>About Me</h2>
+
                 <P>I'm Thi Kim Ngan Tran, a qualified massage therapist with over 8 years experience in therapeutic
                     massage,
                     including deep tissue, relaxation, reflexology, and traditional Eastern techniques. Now practicing
@@ -147,7 +147,30 @@
                     <br>
                 </P>
             </div>
-            <img src="./images/kimPic2.jpg" class="about-img">
+
+        </section>
+
+
+
+        <section class="split">
+
+
+            <div class="bubble">
+                <p>
+                    At VN Hands, we believe in the body’s natural ability to heal.
+                    Our approach combines traditional Vietnamese massage with
+                    holistic therapies to support both physical and emotional well-being.
+                    Each treatment is designed to restore balance, reduce stress, and
+                    encourage your body's own healing response.
+                    <br>
+                    <br>
+                    At VNHands, we follow traditional healing methods passed down by our ancestors to support the body's
+                    natural recovery from within. "Help Self-Healing"
+                    is not just about physical wellness—it's about restoring your inner strength and embracing a more
+                    vibrant, healthy life.
+                </p>
+            </div>
+            <img src="./images/hotStick.jpg" class="about-img">
         </section>
 
         <div id="location">
@@ -197,6 +220,12 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="reviews" id="reviews">
+            <h2>Reviews</h2>
+            <p>Please leave us a review by clicking <a href="https://g.page/r/CSQnk86J2KHHEBM/review"
+                    target="_blank">here</a></p>
         </section>
 
 

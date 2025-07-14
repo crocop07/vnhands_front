@@ -110,10 +110,11 @@ section {
 .hero {
   padding: 2rem;
   justify-items: center;
+  text-align: center;
   background: #f4f4f4;
   background: url(./images/wide.avif) center/cover no-repeat;
   color: white;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 3px 3px 5px #133614;
   padding: 4rem 2rem;
 
 }
@@ -261,8 +262,17 @@ section {
   object-fit: cover;
 }
 
+.calendly-inline-widget {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+
 
   .navbar {
     position: relative;
@@ -426,5 +436,20 @@ section {
     gap: 1rem;
     text-align: center;
   }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  #bookNow {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+
+
 
 }
