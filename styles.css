@@ -30,7 +30,7 @@ h2 {
 }
 
 p {
-  max-width: 600px;
+  max-width: auto;
   margin-bottom: 1rem;
 }
 
@@ -46,11 +46,13 @@ section {
 
 .bubble {
   background-color: #e9e3da;
-  padding: 1.5rem;
+  padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
+
+
 
 .navbar {
   background-color: whitesmoke;
@@ -149,12 +151,7 @@ section {
 
 }
 
-.intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
+
 
 .intro img {
   max-width: 100%;
@@ -162,11 +159,17 @@ section {
   display: block;
 }
 
+.intro-wrapper,
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+}
+
+.intro-wrapper h2 {
+  grid-column: span 2;
+  text-align: center;
 }
 
 .split img {
@@ -276,21 +279,19 @@ section {
 
   .navbar {
     position: relative;
-    /* Add this */
-    /* your existing styles */
-
   }
 
   .navbar img {
-    max-height: 100px;
-    /* or whatever fits nicely */
+    max-height: 80px;
     height: auto;
   }
 
 
   .menu-toggle {
     display: block;
-    position: relative;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
     z-index: 1001;
   }
 
@@ -398,7 +399,11 @@ section {
   }
 
 
+  .intro-wrapper h2 {
+    grid-column: auto;
+  }
 
+  .intro-wrapper,
   .split {
     grid-template-columns: 1fr;
     /* Stack content on top of each other */
