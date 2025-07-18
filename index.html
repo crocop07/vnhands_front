@@ -319,24 +319,34 @@
 
         toggleBtn.addEventListener('click', () => {
             navLinks.classList.toggle('show');
+
+            if (navLinks.classList.contains('show')) {
+                document.body.style.overflow = 'hidden'; // disable background scroll
+            } else {
+                document.body.style.overflow = ''; // restore scroll
+            }
         });
 
         closeBtn.addEventListener('click', () => {
 
             navLinks.classList.remove('show');
+            document.body.style.overflow = ''; // restore scroll
         });
 
         // close menu on window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navLinks.classList.remove('show');
+                document.body.style.overflow = ''; // restore scroll
             }
+
         });
 
         //close menu when user scrolls
         window.addEventListener('scroll', () => {
             if (navLinks.classList.contains('show')) {
                 navLinks.classList.remove('show');
+                document.body.style.overflow = ''; // restore scroll
             }
         });
 
