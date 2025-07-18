@@ -380,13 +380,16 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - 232px);
+    max-height: 0;
+    /* Start hidden */
     background-color: whitesmoke;
     overflow-y: auto;
     opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
     transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
     z-index: 999;
+    pointer-events: none;
+    visibility: hidden;
   }
 
   /* Nav links list */
@@ -415,9 +418,12 @@ section {
 
   /* Show menu */
   .nav-links.show {
-    max-height: 800px;
-    /* Adjust based on estimated menu size */
+    max-height: calc(100vh - 232px);
+    /* Visible area */
     opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
   }
 
   .nav-close-btn {
