@@ -5,7 +5,8 @@ body {
   font-size: 16px;
   color: #333;
   padding: 1rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
   background-color: whitesmoke;
   color: #333;
@@ -30,13 +31,21 @@ h2 {
 }
 
 p {
-  max-width: auto;
+
   margin-bottom: 1rem;
+}
+
+.page-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
+  /* or whatever matches your navbar */
+  box-sizing: border-box;
 }
 
 section[id] {
   scroll-margin-top: 200px;
-  /* adjust 2o0px to your navbar height, this ensures the alignment of section headings under the navbar when clicking nav buttons */
+  /* adjust 200px to your navbar height, this ensures the alignment of section headings under the navbar when clicking nav buttons */
 }
 
 section {
@@ -50,6 +59,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  height: 100%;
 }
 
 
@@ -143,12 +153,8 @@ section {
 
 }
 
-.content {
-  display: grid;
-  repeat(auto-fit, minmax(250px, 1fr));
-  grid-row: 4;
-
-
+.main {
+  width: 100%;
 }
 
 
@@ -159,23 +165,47 @@ section {
   display: block;
 }
 
-.intro-wrapper,
+.intro,
 .split {
+  display: block;
+  padding: 2rem 0;
+}
+
+#intro-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .intro-wrapper h2 {
   grid-column: span 2;
   text-align: center;
+  margin-bottom: 2rem;
 }
+
+#intro-wrapper .intro,
+#intro-wrapper .split {
+  display: contents;
+  /* so that their children (the bubbles) participate directly in the grid */
+}
+
+
+#intro-wrapper .bubble {
+  background-color: #e9e3da;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  box-sizing: border-box;
+}
+
 
 .split img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 .prices {
@@ -253,10 +283,7 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Add a subtle gradient for depth */
-.btn {
-  background: linear-gradient(135deg, #4a6bff, #3a5bef);
-}
+
 
 .about-img {
   max-height: 600px;
@@ -278,7 +305,30 @@ section {
 
 
   .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* make it stick to left edge */
+    right: 0;
+    /* stretch to right edge */
+    width: 100%;
+    /* full width */
+    padding: 1rem 2rem;
+    /* keep your existing padding */
+    background-color: whitesmoke;
+    /* ensure background is opaque */
+    display: flex;
+    /* keep flex layout */
+    justify-content: space-between;
+    /* keep nav items spaced */
+    align-items: center;
+    /* vertically center content */
+    z-index: 1000;
+  }
+
+  body {
+    padding-top: 100px;
+    /* or whatever your navbar height is */
   }
 
   .navbar img {
@@ -288,11 +338,18 @@ section {
 
 
   .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 1.5rem;
+    position: fixed;
+    /* or absolute, if inside a positioned parent */
     top: 1.5rem;
-    z-index: 1001;
+    right: 1.5rem;
+    z-index: 1101;
+    /* higher than navbar and other elements */
+    display: block;
+    /* make sure it’s visible */
+
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
 
@@ -386,34 +443,30 @@ section {
   }
 
 
-  .intro {
-    grid-template-columns: 1fr;
-    /* Stack content on top of each other */
-    text-align: center;
-
-  }
-
-  .intro img {
+  .intro img,
+  .split img {
     margin: 0 auto;
-    /* Center the image */
+    /* Center the images */
   }
 
+  #intro-wrapper {
+    grid-template-columns: 1fr;
+  }
 
-  .intro-wrapper h2 {
+  #intro-wrapper h2 {
     grid-column: auto;
   }
 
-  .intro-wrapper,
+  .intro,
   .split {
     grid-template-columns: 1fr;
     /* Stack content on top of each other */
     text-align: center;
+    align-items: stretch;
+    /*Make bubbles same size */
   }
 
-  .split img {
-    margin: 0 auto;
-    /* Center the image */
-  }
+
 
   .services h2 {
     justify-self: center;
