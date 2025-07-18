@@ -317,28 +317,42 @@
         const navLinks = document.querySelector('.nav-links');
         const closeBtn = document.querySelector('.nav-close-btn');
 
+        const openMenu = () => {
+            navLinks.classList.add('show');
+            document.body.classList.add('menu-open');
+        };
+
+        const closeMenu = () => {
+            navLinks.classList.remove('show');
+            document.body.classList.remove('menu-open');
+        };
+
         toggleBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+            if (navLinks.classList.contains('show')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
 
         closeBtn.addEventListener('click', () => {
-
-            navLinks.classList.remove('show');
+            closeMenu();
         });
 
-        // close menu on window resize
+        // Close menu on window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
-                navLinks.classList.remove('show');
+                closeMenu();
             }
         });
 
-        //close menu when user scrolls
+        // Close menu when user scrolls
         window.addEventListener('scroll', () => {
             if (navLinks.classList.contains('show')) {
-                navLinks.classList.remove('show');
+                closeMenu();
             }
         });
+
 
 
     </script>

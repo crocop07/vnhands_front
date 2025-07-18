@@ -4,10 +4,6 @@ body {
   line-height: 1.6;
   font-size: 16px;
   color: #333;
-  padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
   background-color: whitesmoke;
   color: #333;
 
@@ -38,7 +34,9 @@ p {
 .page-container {
   max-width: 100%;
   overflow-x: hidden;
-  padding: 0 1rem;
+  padding: 4rem;
+  margin-left: auto;
+  margin-right: auto;
   /* or whatever matches your navbar */
   box-sizing: border-box;
 }
@@ -380,16 +378,13 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: 0;
-    /* Start hidden */
+    height: calc(100vh - 232px);
     background-color: whitesmoke;
     overflow-y: auto;
     opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
     transform: translateY(-20px);
-    transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
     z-index: 999;
-    pointer-events: none;
-    visibility: hidden;
   }
 
   /* Nav links list */
@@ -418,12 +413,9 @@ section {
 
   /* Show menu */
   .nav-links.show {
-    max-height: calc(100vh - 232px);
-    /* Visible area */
+    max-height: 800px;
+    /* Adjust based on estimated menu size */
     opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    visibility: visible;
   }
 
   .nav-close-btn {
