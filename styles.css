@@ -57,12 +57,14 @@ section {
 .navbar {
   background-color: whitesmoke;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  /* Aligns logo and menu vertically */
+  gap: 2rem;
+  /* Sets exact spacing between logo and menu */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
 }
 
 .nav-close-btn {
@@ -70,12 +72,13 @@ section {
 }
 
 
-.navbar ul {
+.nav-links ul {
   display: flex;
   list-style: none;
   gap: 1rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  margin-bottom: -100px;
 }
 
 .navbar a {
@@ -84,7 +87,7 @@ section {
 }
 
 .navbar img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   /* Maintain aspect ratio */
   max-height: 200px;
@@ -107,6 +110,9 @@ section {
   gap: 1rem;
   margin: 0;
   padding: 0;
+  position: relative;
+  top: 50px;
+  left: -100px;
 }
 
 .hero {
@@ -179,9 +185,14 @@ section {
 }
 
 .prices {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: 0 auto;
+}
 
+.price-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .footer {
@@ -273,12 +284,16 @@ section {
   box-shadow: none !important;
 }
 
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
 
   .navbar {
     position: relative;
+    justify-content: center;
+    /* Centers items horizontally */
+    padding: 1rem;
   }
 
   .navbar img {
@@ -293,6 +308,7 @@ section {
     right: 1.5rem;
     top: 1.5rem;
     z-index: 1001;
+    font-size: 2.8rem;
   }
 
 
@@ -437,8 +453,7 @@ section {
   }
 
   .prices {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+
     text-align: center;
   }
 
@@ -454,6 +469,13 @@ section {
     margin: 0 auto;
   }
 
+  .navbar img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+
+
+  }
 
 
 
